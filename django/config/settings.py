@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'myapp.apps.MyappConfig',
+    'foreignkey.apps.ForeignkeyConfig',
 
     'django.contrib.admin',
     'django.contrib.auth',
