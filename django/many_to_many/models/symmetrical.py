@@ -11,7 +11,12 @@ class InstagramUser(models.Model):
     following = models.ManyToManyField(
         'self',
         symmetrical=False,
+        related_name='followers',
     )
 
     def __str__(self):
         return self.name
+
+    # def followers(self):
+    #     return self.instagramuser_set.all()
+    #     # 자신을 following하고 잇는 사람들을 리턴
