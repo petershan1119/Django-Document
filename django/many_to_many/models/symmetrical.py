@@ -14,6 +14,9 @@ class InstagramUser(models.Model):
         related_name='followers',
     )
 
+    class Meta:
+        verbose_name_plural = 'Symmetrical - InstagramUsers'
+
     def __str__(self):
         return self.name
 

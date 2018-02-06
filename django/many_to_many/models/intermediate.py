@@ -18,12 +18,18 @@ class Post(models.Model):
         related_name='like_posts', # u2.post_set.all() 대신 u2.like_posts.all()
     )
 
+    class Meta:
+        verbose_name_plural = 'Intermediate - Posts'
+
     def __str__(self):
         return self.title
 
 
 class User(models.Model):
     name = models.CharField(max_length=50)
+
+    class Meta:
+        verbose_name_plural = 'Intermediate - Users'
 
     def __str__(self):
         return self.name
@@ -41,6 +47,9 @@ class Postlike(models.Model):
     created_date = models.DateTimeField(
         auto_now_add=True
     )
+
+    class Meta:
+        verbose_name_plural = 'Intermediate - Postlike'
 
     def __str__(self):
         return '"{title}"글의 좋아요({name}, {date})'.format(
