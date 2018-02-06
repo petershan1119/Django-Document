@@ -6,7 +6,7 @@ from .models import (
     # intermediate
     Post, User, Postlike,
     # self
-    FacebookUser,
+    FacebookUser, InstagramUser
 )
 
 admin.site.register(Topping)
@@ -15,3 +15,4 @@ admin.site.register(Post)
 admin.site.register(User)
 admin.site.register(Postlike)
 admin.site.register(FacebookUser)
+admin.site.register(InstagramUser)
