@@ -18,6 +18,17 @@ class TwitterUser(models.Model):
         related_name='+',
     )
 
+    def __str__(self):
+        return self.name
+
+    def following(self):
+        following_relations = self.relations_by_from_user.filter(
+            type=Relation.RELATION_TYPE_FOLLOWING,
+        )
+        following_pk_list = following_relations.values_list('to_user', flat=True)
+        following_users = TwitterUser.objects.filter(pk__in=following_pk_list)
+        return following_users
+
 
 class Relation(models.Model):
     """
