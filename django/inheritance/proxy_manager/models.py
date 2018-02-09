@@ -13,6 +13,8 @@ class NewManager(Manager):
 
 
 class MyPerson1(Person):
+    secondary = NewManager()
+
     class Meta:
         proxy = True
 
