@@ -10,6 +10,8 @@ class Place(models.Model):
     other = models.ForeignKey(
         Other,
         on_delete=models.SET_NULL,
+        related_name='places',
+        related_query_name='place',
         blank=True,
         null=True,
     )
