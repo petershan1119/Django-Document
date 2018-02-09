@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class CustomManagerConfig(AppConfig):
-    name = 'custom_manager'
+    name = 'inheritance.custom_manager'

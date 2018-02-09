@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'inheritance.rel.apps.RelConfig',
     'inheritance.multi_table.apps.MultiTableConfig',
     'inheritance.proxy.apps.ProxyConfig',
+    'inheritance.custom_manager.apps.CustomManagerConfig',
 
     'django.contrib.admin',
     'django.contrib.auth',

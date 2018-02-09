@@ -1,3 +1,13 @@
 from django.db import models
+from django.db.models import Manager
 
-# Create your models here.
+
+class CustomManager(Manager):
+    pass
+
+
+class AbstractBase(models.Model):
+    objects = CustomManager()
+
+    class Meta:
+        abstract = True
